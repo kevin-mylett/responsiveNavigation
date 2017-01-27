@@ -3,6 +3,8 @@
 }
 
 html, body {
+	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -29,8 +31,56 @@ html, body {
 	background-color: #4CAF50;
 }
 
-@media screen and (max-width: 480px) {
-	.site-navigation ul {
+/*Navigation Menu*/
+.nav-toggle {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+    cursor: pointer;
+}
+
+.bar {
+	display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #4CAF50;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.nav-toggle.open .bar1{
+	transform: rotate(-45deg) translate(-6px, 6px) ;
+}
+
+.nav-toggle.open .bar2 {
+	opacity: 0;
+}
+
+.nav-toggle.open .bar3{
+	transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.nav-toggle {
 		display: block;
+	}
+
+	.site-navigation ul {
+		transform: translateX(-100%);
+		flex-direction: column;
+		height: 100vh;
+	}
+
+	.site-navigation ul.open {
+		transform: translateX(0%);
+		transition: all 0.8s ease-in;
+	}
+
+	.site-navigation ul li a {
+		font-size: 1.5rem;
+		text-align: center;
 	}
 }
