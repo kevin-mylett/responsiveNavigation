@@ -1,23 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    smallScreenMenu();
+    mobileMenu();
 });
 
-function smallScreenMenu() {
 
-	var nav = document.getElementsByClassName('nav-toggle');
-	var slideNav = nav[0];
+function mobileMenu() {
 
-	slideNav.onclick = function() {
+	var navbutton =  document.querySelector('.nav-toggle');
 
-		var menu = document.getElementsByClassName('menu');
-		var slideNavMenu = menu[0];
+	navbutton.onclick = function() {
 
-		if (slideNavMenu.className == 'menu') {
-			slideNavMenu.className += ' open';
-			slideNav.className += ' open';
+		var menu = document.querySelector('.menu');
+		
+		if (menu.className == 'menu') {
+			menu.className += ' open';
+			navbutton.className += ' open';
 		} else {
-			slideNavMenu .className = 'menu';
-			slideNav.className = 'nav-toggle';
+			menu.className = 'menu';
+			navbutton.className = 'nav-toggle';
 		}
 	}
 };
