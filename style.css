@@ -28,3 +28,9 @@ html, body {
 	color: #fff;
 	background-color: #4CAF50;
 }
+
+footer {
+	height: 400px;
+	width: 100%;
+	background-color: #000;
+}
