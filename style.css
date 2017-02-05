@@ -3,15 +3,20 @@
 }
 
 html, body {
+	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
+}
+
+header {
+	background-color: #333;
 }
 
 .site-navigation ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	background-color: #333;
 	display: flex;
 	justify-content: center;
 }
@@ -28,6 +33,60 @@ html, body {
 	color: #fff;
 	background-color: #4CAF50;
 }
+
+/*Navigation Menu*/
+.nav-toggle {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+    cursor: pointer;
+}
+
+.bar {
+	display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #4CAF50;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.nav-toggle.open .bar1{
+	transform: rotate(-45deg) translate(-6px, 6px) ;
+}
+
+.nav-toggle.open .bar2 {
+	opacity: 0;
+}
+
+.nav-toggle.open .bar3{
+	transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+@media screen and (max-width: 480px) {
+	.nav-toggle {
+		display: block;
+	}
+
+	.site-navigation ul.menu {
+		transform: translateX(-100%);
+	}
+
+	.site-navigation ul.open {
+		flex-direction: column;
+		transform: translateX(0%);
+		transition: all 0.4s ease;
+		height: 100vh;
+	}
+
+	.site-navigation ul li a {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+}
+
+/* Diagonal Footer */
 
 main {
 	min-height: 600px;
