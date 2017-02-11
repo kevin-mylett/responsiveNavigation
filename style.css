@@ -89,38 +89,39 @@ header {
 /* Diagonal Footer */
 
 main {
-	min-height: 600px;
+	min-height: 1000px;
 	width: 100%;
 }
 
-footer {
-	background-color: #fb4b4e;
+
+.diagonal-footer {
+	position: relative;
+	bottom: 0;
+	height: 400px;
+	width: 100%;
 }
 
-.gradient {
-  float: left;
-  height: 400px;
-  width: 100%;
-  color: #fff;
-}
-.gradient{
-  position: relative;
+.diagonal-footer > span {
+	position: absolute;
+	display: block;
+	padding: 10px;
+	top: calc(40% + 5px); /* background size + buffer*/
+	height: 50%;
+	left: 0;
+	right: 0;
+	max-width: 960px;
+	margin: 0 auto;
+	font-size: 4rem;
+	text-transform: uppercase;
+	text-align: right;
+	color: #fff;
 }
 
-.gradient.top {
-  background: linear-gradient(to bottom right, transparent 50%, #fb4b4e 50%) no-repeat, linear-gradient(to bottom right, transparent 0.1%, #fb4b4e 0.1%) no-repeat;
-  background-size: 100% 40%, 100% 60%;
-  background-position: 0% 0%, 0% 100%;
+svg {
+	height: 100%;
+	width: 100%;
 }
 
-.gradient span{
-  position: absolute;
-}
-.gradient.top span{
-  top: calc(40% + 5px); /* background size + buffer */ 
-  height: 50%;
-  left: 0;
-  right: 0;
-  max-width: 960px;
-  margin: 0 auto;
+polygon {
+	fill: #fb4b4e;
 }
