@@ -2,21 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu();
 });
 
-
 function mobileMenu() {
 
-	var navbutton =  document.querySelector('.nav-toggle');
+	var navButton =  document.querySelector('.nav-toggle');
+	var menu = document.querySelector('.menu');
 
-	navbutton.onclick = function() {
-
-		var menu = document.querySelector('.menu');
-		
-		if (menu.className == 'menu') {
-			menu.className += ' open';
-			navbutton.className += ' open';
-		} else {
-			menu.className = 'menu';
-			navbutton.className = 'nav-toggle';
-		}
+	function toggleMenu() {
+		menu.classList.toggle('open');
+		navButton.classList.toggle('open');
 	}
+
+	navButton.addEventListener('click', toggleMenu);
 };
