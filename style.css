@@ -70,7 +70,7 @@ header {
 	}
 
 	.site-navigation ul.menu {
-		transform: translateX(-100%);
+		transform: translateX(-150%);
 	}
 
 	.site-navigation ul.open {
